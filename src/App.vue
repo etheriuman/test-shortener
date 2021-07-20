@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="title text-center my-5">
+      <h2>picsee短網址產生器</h2>
+    </div>
+    <Shorterner />
+    <History />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+import Shorterner from './components/Shorterner.vue'
+import History from './components/History.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Shorterner,
+    History
   }
 }
 </script>
 
 <style>
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+}
+p, span {
+  margin: 0;
+  padding: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+
 }
 </style>
